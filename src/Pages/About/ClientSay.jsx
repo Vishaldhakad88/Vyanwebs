@@ -33,11 +33,21 @@ function ClientSay() {
             100% { transform: translateX(-50%); }
           }
 
-          .scroll-animation {
+          @keyframes scrollRight {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+          }
+
+          .scroll-left {
             animation: scrollLeft 30s linear infinite;
           }
 
-          .scroll-animation:hover {
+          .scroll-right {
+            animation: scrollRight 30s linear infinite;
+          }
+
+          .scroll-left:hover,
+          .scroll-right:hover {
             animation-play-state: paused;
           }
         `}
@@ -48,17 +58,39 @@ function ClientSay() {
           What Our Clients Say
         </h2>
 
-        <div className="relative overflow-hidden w-full max-w-6xl mx-auto">
-          <div className="scroll-animation flex gap-6 w-max whitespace-nowrap">
+        {/* First Row: Left to Right */}
+        <div className="relative overflow-hidden w-full max-w-6xl mx-auto mb-12">
+          <div className="scroll-right flex gap-6 w-max whitespace-nowrap">
             {[...clients, ...clients].map((client, index) => (
               <div
-                key={index}
+                key={`r1-${index}`}
                 className="w-80 sm:w-64 bg-gray-800 text-white rounded-lg shadow-lg p-6 flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
               >
-                <p className="italic text-base mb-6  whitespace-normal">
+                <p className="italic text-base mb-6 whitespace-normal">
                   “{client.title}”
                 </p>
+                <div>
+                  <h3 className="font-semibold text-lg text-yellow-400">
+                    {client.name}
+                  </h3>
+                  <p className="text-sm text-gray-400">{client.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
 
+        {/* Second Row: Right to Left */}
+        <div className="relative overflow-hidden w-full max-w-6xl mx-auto">
+          <div className="scroll-left flex gap-6 w-max whitespace-nowrap">
+            {[...clients, ...clients].map((client, index) => (
+              <div
+                key={`r2-${index}`}
+                className="w-80 sm:w-64 bg-gray-800 text-white rounded-lg shadow-lg p-6 flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+              >
+                <p className="italic text-base mb-6 whitespace-normal">
+                  “{client.title}”
+                </p>
                 <div>
                   <h3 className="font-semibold text-lg text-yellow-400">
                     {client.name}

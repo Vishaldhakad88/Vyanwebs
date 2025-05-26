@@ -57,7 +57,7 @@ const ServicesSection = () => {
   }, []);
 
   return (
-    <section className="bg-blue-950 text-white py-16 px-6">
+    <section className="bg-gray-950 text-white py-16 px-6">
       <h2 className="text-yellow-400 text-4xl font-bold text-center mb-12">
         Our Services
       </h2>
