@@ -117,45 +117,50 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Nav */}
-     {isOpen && (
-  <div className="md:hidden bg-gray-900 px-4 pb-4 space-y-2">
-    <Link
-      to="/"
-      className="flex items-center gap-2 text-white px-3 py-2 hover:bg-blue-800 rounded"
-    >
-      <FaHouse className="text-lg" />
-      Home
-    </Link>
-    <Link
-      to="/about"
-      className="flex items-center gap-2 text-white px-3 py-2 hover:bg-blue-800 rounded"
-    >
-      <FaAdjust className="text-lg" />
-      About
-    </Link>
-    <Link
-      to="/our-work"
-      className="flex items-center gap-2 text-white px-3 py-2 hover:bg-blue-800 rounded"
-    >
-      <FaBagShopping className="text-lg" />
-      Our Work
-    </Link>
-    <Link
-      to="/services"
-      className="flex items-center gap-2 text-white px-3 py-2 hover:bg-blue-800 rounded"
-    >
-      <FaServer className="text-lg" />
-      Services
-    </Link>
-    <Link
-      to="/contact"
-      className="flex items-center justify-center gap-2 bg-white text-blue-900 px-3 py-2 mt-2 rounded font-semibold"
-    >
-      <FaPhone className="text-lg" />
-      Contact Us
-    </Link>
-  </div>
-)}
+      {isOpen && (
+        <div className="md:hidden bg-gray-900 px-4 pb-4 space-y-2">
+          <Link
+            to="/"
+            onClick={() => setIsOpen(false)}
+            className="flex items-center gap-2 text-white px-3 py-2 hover:bg-blue-800 rounded"
+          >
+            <FaHouse className="text-lg" />
+            Home
+          </Link>
+          <Link
+            to="/about"
+            onClick={() => setIsOpen(false)}
+            className="flex items-center gap-2 text-white px-3 py-2 hover:bg-blue-800 rounded"
+          >
+            <FaAdjust className="text-lg" />
+            About
+          </Link>
+          <Link
+            to="/our-work"
+            onClick={() => setIsOpen(false)}
+            className="flex items-center gap-2 text-white px-3 py-2 hover:bg-blue-800 rounded"
+          >
+            <FaBagShopping className="text-lg" />
+            Our Work
+          </Link>
+          <Link
+            to="/services"
+            onClick={() => setIsOpen(false)}
+            className="flex items-center gap-2 text-white px-3 py-2 hover:bg-blue-800 rounded"
+          >
+            <FaServer className="text-lg" />
+            Services
+          </Link>
+          <Link
+            to="/contact"
+            onClick={() => setIsOpen(false)}
+            className="flex items-center justify-center gap-2 bg-white text-blue-900 px-3 py-2 mt-2 rounded font-semibold"
+          >
+            <FaPhone className="text-lg" />
+            Contact Us
+          </Link>
+        </div>
+      )}
     </nav>
   );
 };
