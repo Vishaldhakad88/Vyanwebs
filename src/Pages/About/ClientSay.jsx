@@ -52,9 +52,9 @@ function ClientSay() {
           }
         `}
       </style>
-
-      <section className="bg-blue-200 py-16 px-6 text-center text-white">
-        <h2 className="text-yellow-400 text-4xl font-bold mb-12">
+      <hr />
+      <section className="bg-white py-16 px-6 text-center text-white">
+        <h2 className="text-blue-900 text-4xl font-bold mb-12">
           What Our Clients Say
         </h2>
 

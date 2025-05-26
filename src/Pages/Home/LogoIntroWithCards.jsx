@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import bgClip from "../../Media/bgClip.mp4";
+import { Link } from "react-router-dom";
+import logo from "../../../public/logo.jpg";
 
 const LogoIntroWithCards = () => {
   const logoRef = useRef(null);
@@ -101,7 +103,15 @@ const LogoIntroWithCards = () => {
           ref={logoRef}
           className="relative z-10 w-full sm:w-[100%] bg-gray-800 flex items-center justify-center rounded-b-[40%] text-4xl font-bold shadow-lg mt-10 h-24"
         >
-          <div className="text-blue-600">LOGO</div>
+          <div className="flex-shrink-0">
+            <Link
+              to="/"
+              className="flex items-center text-xl font-bold text-white"
+            >
+              <img src={logo} alt="Logo" className="h-8 w-auto sm:h-10" />
+              <span className="ml-2 text-white">VyanWebs</span>
+            </Link>
+          </div>
         </div>
 
         {showCards && (
@@ -118,7 +128,7 @@ const LogoIntroWithCards = () => {
                 Better
               </div>
               <div
-                className="text-cyan-400 sm:text-5xl"
+                className="text-white-400 sm:text-5xl"
                 style={{ fontFamily: "Algerian" }}
               >
                 Solution for Your Placements

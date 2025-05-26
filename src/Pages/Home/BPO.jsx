@@ -74,7 +74,7 @@ const BPO = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-gray-900 px-6 py-12 flex flex-col justify-center overflow-hidden">
+    <div className="relative min-h-screen bg-gray-600 px-6 py-12 flex flex-col justify-center overflow-hidden">
       {/* Background text */}
       <h1
         className="absolute select-none whitespace-nowrap top-10 left-1/2 transform -translate-x-1/2 text-[clamp(3rem,15vw,12rem)] font-extrabold uppercase opacity-10 pointer-events-none"

@@ -96,9 +96,9 @@ function ExpertiseSection() {
   }, []);
 
   return (
-    <section className="bg-gray-800 py-16 px-4 sm:px-8 text-white">
+    <section className="bg-white py-16 px-4 sm:px-8 text-white">
       {/* Heading */}
-      <h2 className="text-4xl sm:text-5xl font-bold text-center text-yellow-500 mb-12">
+      <h2 className="text-4xl sm:text-5xl font-bold text-center text-blue-900 mb-12">
         Our Expertise
       </h2>
 
@@ -134,7 +134,7 @@ function ExpertiseSection() {
 
       {/* Success Stories Section */}
       <div className="mt-24 max-w-6xl mx-auto">
-        <h2 className="text-4xl sm:text-5xl font-bold text-center text-yellow-500 mb-12">
+        <h2 className="text-4xl sm:text-5xl font-bold text-center text-blue-900 mb-12">
           Our Success Stories
         </h2>
 
@@ -157,7 +157,7 @@ function ExpertiseSection() {
         ref={ctaRef}
         className="mt-24 text-center max-w-3xl mx-auto px-4 sm:px-0"
       >
-        <h2 className="text-4xl sm:text-5xl font-bold text-yellow-400 mb-6">
+        <h2 className="text-4xl sm:text-5xl font-bold text-blue-900 mb-6">
           Let’s Build Something Great Together!
         </h2>
         <p className="text-lg sm:text-xl text-white mb-8">

@@ -58,8 +58,8 @@ const WhyChooseUs = () => {
   }, []);
 
   return (
-    <section className="bg-[#0e1626] py-12 px-4 md:px-12 text-white text-center">
-      <h2 className="text-3xl md:text-4xl font-bold text-yellow-400 mb-10">
+    <section className="bg-white py-12 px-4 md:px-12 text-white text-center">
+      <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-10">
         Why Choose Us?
       </h2>
       <div

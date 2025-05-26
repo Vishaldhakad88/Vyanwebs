@@ -25,10 +25,10 @@ export default function OurServices() {
   }, []);
 
   return (
-    <section className="max-w-7xl mx-auto p-6 bg-gray-800">
+    <section className="max-w-7xl mx-auto p-6 bg-white">
       <div
         ref={(el) => (boxesRef.current[0] = el)}
-        className="bg-yellow-400 text-black font-bold md:w-[40%] text-3xl md:text-4xl p-5 rounded-md flex items-center justify-center mb-8 shadow-lg mx-auto"
+        className="bg-blue-900 text-white font-bold md:w-[30%] text-3xl md:text-4xl p-4 rounded-md flex items-center justify-center mb-8 shadow-lg mx-auto"
       >
         Our Services
       </div>

@@ -57,7 +57,7 @@ const ServicesSection = () => {
   }, []);
 
   return (
-    <section className="bg-gray-950 text-white py-16 px-6">
+    <section className="bg-white text-black py-16 px-6">
       <h2 className="text-yellow-400 text-4xl font-bold text-center mb-12">
         Our Services
       </h2>
@@ -67,10 +67,12 @@ const ServicesSection = () => {
           <div
             key={index}
             ref={(el) => (cardsRef.current[index] = el)}
-            className="bg-dark-blue border border-gray-700 p-6 rounded-lg transition duration-300 hover:bg-yellow-300  hover:text-white"
+            className="bg-dark-blue border border-white bg-black p-6 rounded-lg transition duration-300 hover:bg-blue-950  hover:text-white"
           >
-            <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-            <p className="text-sm">{service.description}</p>
+            <h3 className="text-xl font-semibold mb-3 text-white">
+              {service.title}
+            </h3>
+            <p className="text-sm text-white">{service.description}</p>
           </div>
         ))}
       </div>

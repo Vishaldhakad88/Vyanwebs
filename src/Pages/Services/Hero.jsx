@@ -53,8 +53,8 @@ const ITConsultingIntro = () => {
           ref={contentRef}
           className=" bg-opacity-200 p-8 rounded-lg max-w-3xl text-white"
         >
-          <h1 className="text-3xl text-yellow-500 sm:text-5xl font-bold mb-4">
-            Our IT Consulting Services
+          <h1 className="text-3xl sm:text-5xl font-bold mb-4">
+            <span className="text-white">Our IT Consulting Services</span>
           </h1>
           <p className="text-sm sm:text-lg leading-relaxed">
             We provide end-to-end IT consulting solutions to help businesses
@@ -64,9 +64,9 @@ const ITConsultingIntro = () => {
         </div>
       </div>
 
-      <section className="bg-gray-800 py-16 px-4 sm:px-8 text-white">
+      <section className="bg-white py-16 px-4 sm:px-8 text-white">
         {/* Heading */}
-        <h2 className="text-4xl sm:text-5xl font-bold text-center text-yellow-500 mb-12">
+        <h2 className="text-4xl sm:text-5xl font-bold text-center text-blue-900 mb-12">
           Our Expertise
         </h2>
 
@@ -82,10 +82,7 @@ const ITConsultingIntro = () => {
             </div>
           ))}
         </div>
-
-        
-        
-        </section>
+      </section>
     </>
   );
 };

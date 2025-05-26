@@ -38,7 +38,7 @@ const services = [
 
 const SmartITSolutions = () => {
   return (
-    <div className="flex flex-col md:flex-row items-start justify-between p-8 gap-8 bg-gray-800 min-h-screen">
+    <div className="flex flex-col md:flex-row items-start justify-between p-8 gap-8 bg-white min-h-screen">
       {/* Left Section */}
       <div className="md:w-1/2 space-y-6">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-800">
@@ -52,13 +52,13 @@ const SmartITSolutions = () => {
             with Smart IT Solutions
           </span>
         </h1>
-        <p className="text-gray-600">
+        <p className=" text-black">
           In the digital era, staying ahead requires strategic IT planning and
           cutting-edge technology. At Vyanwebs Pvt. Ltd., we help businesses
           harness the power of IT to optimize operations, enhance security, and
           drive growth.
         </p>
-        <button className="bg-yellow-500 hover:bg-yellow-600 transition-all duration-300 text-white font-semibold px-6 py-3 rounded shadow-md hover:shadow-lg hover:scale-105">
+        <button className="bg-blue-950 hover:bg-blue-600 transition-all duration-300 text-white font-semibold px-6 py-3 rounded shadow-md hover:shadow-lg hover:scale-105">
           Get Started Today
         </button>
       </div>

@@ -1,6 +1,16 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
+import {
+  FaAdjust,
+  FaBars,
+  FaHome,
+  FaPhone,
+  FaServer,
+  FaTimes,
+} from "react-icons/fa"; // Import hamburger and close icons
+import logo from "../../public/logo.jpg";
+import { FaBagShopping, FaHouse, FaSquareUpwork } from "react-icons/fa6";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,16 +57,22 @@ const Navbar = () => {
   return (
     <nav
       ref={navRef}
-      className="fixed top-0 left-0 w-full bg-gray-900 text-white shadow-md z-50"
+      className="fixed top-0 left-0 w-full bg-white text-black shadow-md z-50"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
+          {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="text-xl font-bold">
-              Logo
+            <Link
+              to="/"
+              className="flex items-center text-xl font-bold text-white"
+            >
+              <img src={logo} alt="Logo" className="h-8 w-auto sm:h-10" />
+              <span className="ml-2 text-black">VyanWebs</span>
             </Link>
           </div>
 
+          {/* Desktop Nav */}
           <div className="hidden md:flex md:items-center md:justify-center flex-1 space-x-6">
             <Link to="/" className="hover:text-yellow-500">
               Home
@@ -72,80 +88,74 @@ const Navbar = () => {
             </Link>
           </div>
 
+          {/* Contact Button */}
           <div className="hidden md:block">
             <Link
               ref={contactBtnRef}
               to="/contact"
-              className="bg-white text-blue-900 px-4 py-2 rounded font-semibold shadow hover:bg-yellow-300 hover:text-white transition duration-300"
+              className="bg-blue-900 text-white px-4 py-2 rounded font-semibold shadow hover:bg-blue-300 hover:text-black transition duration-300"
             >
               Contact Us
             </Link>
           </div>
 
+          {/* Mobile Menu Toggle Button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white focus:outline-none"
+              className="text-black focus:outline-none"
+              aria-label="Toggle menu"
             >
-              <svg
-                className="h-6 w-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                {isOpen ? (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                ) : (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                )}
-              </svg>
+              {isOpen ? (
+                <FaTimes className="h-6 w-6" />
+              ) : (
+                <FaBars className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
       </div>
 
-      {isOpen && (
-        <div className="md:hidden bg-blue-900 px-2 pb-3 space-y-1">
-          <Link to="/" className="block px-3 py-2 hover:bg-blue-800 rounded">
-            Home
-          </Link>
-          <Link
-            to="/about"
-            className="block px-3 py-2 hover:bg-blue-800 rounded"
-          >
-            About
-          </Link>
-          <Link
-            to="/our-work"
-            className="block px-3 py-2 hover:bg-blue-800 rounded"
-          >
-            Our Work
-          </Link>
-          <Link
-            to="/services"
-            className="block px-3 py-2 hover:bg-blue-800 rounded"
-          >
-            Services
-          </Link>
-          <Link
-            to="/contact"
-            className="block px-3 py-2 mt-2 bg-white text-blue-900 rounded text-center font-semibold"
-          >
-            Contact Us
-          </Link>
-        </div>
-      )}
+      {/* Mobile Nav */}
+     {isOpen && (
+  <div className="md:hidden bg-gray-900 px-4 pb-4 space-y-2">
+    <Link
+      to="/"
+      className="flex items-center gap-2 text-white px-3 py-2 hover:bg-blue-800 rounded"
+    >
+      <FaHouse className="text-lg" />
+      Home
+    </Link>
+    <Link
+      to="/about"
+      className="flex items-center gap-2 text-white px-3 py-2 hover:bg-blue-800 rounded"
+    >
+      <FaAdjust className="text-lg" />
+      About
+    </Link>
+    <Link
+      to="/our-work"
+      className="flex items-center gap-2 text-white px-3 py-2 hover:bg-blue-800 rounded"
+    >
+      <FaBagShopping className="text-lg" />
+      Our Work
+    </Link>
+    <Link
+      to="/services"
+      className="flex items-center gap-2 text-white px-3 py-2 hover:bg-blue-800 rounded"
+    >
+      <FaServer className="text-lg" />
+      Services
+    </Link>
+    <Link
+      to="/contact"
+      className="flex items-center justify-center gap-2 bg-white text-blue-900 px-3 py-2 mt-2 rounded font-semibold"
+    >
+      <FaPhone className="text-lg" />
+      Contact Us
+    </Link>
+  </div>
+)}
     </nav>
   );
 };
